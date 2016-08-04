@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "appium.sarojsharma.kommo"
+        minSdkVersion 11
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.0'
+    testCompile 'org.assertj:assertj-core:2.0.0'
+    testCompile 'org.testng:testng:6.9.10'
+
+    compile files('libs/apache-mime4j-0.6.jar')
+    compile files('libs/commons-codec-1.10.jar')
+    compile files('libs/commons-collections-3.2.1.jar')
+    compile files('libs/commons-exec-1.3.jar')
+    compile files('libs/commons-io-2.4.jar')
+    compile files('libs/commons-lang3-3.4.jar')
+    compile files('libs/commons-logging-1.1.3.jar')
+    compile files('libs/commons-validator-1.4.1.jar')
+    compile files('libs/gson-2.3.1.jar')
+    compile files('libs/guava-18.0.jar')
+    compile files('libs/hamcrest-core-1.3.jar')
+    compile files('libs/hamcrest-library-1.3.jar')
+    compile files('libs/httpclient-4.4.1.jar')
+    compile files('libs/httpcore-4.4.1.jar')
+    compile files('libs/httpmime-4.4.1.jar')
+}
