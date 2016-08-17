@@ -25,7 +25,6 @@ public  class SwipeTest {
 
         }
 
-
 //for swiping vertical
 
     public void swipe_Vertical() throws InterruptedException {
@@ -56,6 +55,7 @@ public  class SwipeTest {
     @After
     public void testCaseTearDown()
     {
+
         init_dr.driver.quit();
     }
 
